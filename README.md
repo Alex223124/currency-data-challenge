@@ -1,24 +1,34 @@
-# README
+Setup:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+add config/secrets.yml
+    
+    development:
+      apilayer_key: yourcodehere
 
-Things you may want to cover:
 
-* Ruby version
+How to run:
 
-* System dependencies
+    rails s
 
-* Configuration
+Tests:
 
-* Database creation
+    no tests added 
+    
+Description:
 
-* Database initialization
+The task
 
-* How to run the test suite
+You need to fetch current currency rates for EUR to USD and EUR to CHF from the currencylayer API and store them into a PostgreSQL database table. https://currencylayer.com (you'll have to sign up for a free account)​
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+Goals:
 
-* ...
+Define the table structure
+
+Provide a Ruby script that fetches the data and stores it in the table
+
+Build a simple Website, which allows to input currency values and translate them accordingly.​
+
+Constraints
+
+    Use money-currencylayer-bank gem​
