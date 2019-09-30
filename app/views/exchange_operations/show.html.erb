@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>From currency:</strong>
+  <%= @exchange_operation.from_currency %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @exchange_operation.amount %>
+</p>
+
+<p>
+  <strong>To currency:</strong>
+  <%= @exchange_operation.to_currency %>
+</p>
+
+<p>
+  <strong>Result:</strong>
+  <%= @exchange_operation.result %>
+</p>
+
+<%= link_to 'Back', exchange_operations_path %>

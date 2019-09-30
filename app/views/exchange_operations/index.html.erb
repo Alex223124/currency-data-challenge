@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Exchange Operations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>From currency</th>
+      <th>Amount</th>
+      <th>To currency</th>
+      <th>Result</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exchange_operations.each do |exchange_operation| %>
+      <tr>
+        <td><%= exchange_operation.from_currency %></td>
+        <td><%= exchange_operation.amount %></td>
+        <td><%= exchange_operation.to_currency %></td>
+        <td><%= exchange_operation.result %></td>
+        <td><%= link_to 'Show', exchange_operation %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exchange Operation', new_exchange_operation_path %>

@@ -1,0 +1,34 @@
+<%= form_with(model: exchange_operation, local: true) do |form| %>
+  <% if exchange_operation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(exchange_operation.errors.count, "error") %> prohibited this exchange_operation from being saved:</h2>
+
+      <ul>
+      <% exchange_operation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+   Type: EUR
+    <%= form.label :from_currency %>
+    <%= form.text_field :from_currency %>
+  </div>
+
+  <div class="field">
+    <%= form.label :amount %>
+    <%= form.text_field :amount %>
+  </div>
+
+  Type: USD or CHF
+  <div class="field">
+    <%= form.label :to_currency %>
+    <%= form.text_field :to_currency %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

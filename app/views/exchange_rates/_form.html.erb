@@ -1,0 +1,32 @@
+<%= form_with(model: exchange_rate, local: true) do |form| %>
+  <% if exchange_rate.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(exchange_rate.errors.count, "error") %> prohibited this exchange_rate from being saved:</h2>
+
+      <ul>
+      <% exchange_rate.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<!--  <div class="field">-->
+    <%#= form.label :source_currency %>
+    <%#= form.text_field :source_currency %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :target_currency %>
+    <%#= form.text_field :target_currency %>
+<!--  </div>-->
+
+<!--  <div class="field">-->
+    <%#= form.label :rate %>
+    <%#= form.text_field :rate %>
+<!--  </div>-->
+
+  <div class="actions">
+    <%= form.submit "Get current currency rate" %>
+  </div>
+<% end %>
